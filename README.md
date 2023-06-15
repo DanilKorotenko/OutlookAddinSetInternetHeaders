@@ -37,3 +37,10 @@ Software
 macOS 13.4
 
 Outlook for Mac 16.74 (23061100)
+
+
+Additional info
+---------------
+
+This issue is absent in Outlook on the Web (https://outlook.office.com/)
+
