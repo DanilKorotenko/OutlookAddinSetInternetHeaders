@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>No UI</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+    <script type="text/javascript">
+
+Office.initialize = function (reason)
+{
+    console.log("*******************************************************");
+    console.log("Office.initialize");
+}
+
+// Set custom internet headers.
+function setCustomHeaders()
+{
+    console.log("set custom headers");
+
+    Office.context.mailbox.item.internetHeaders.setAsync(
+        { "x-preferred-fruit": "orange", "x-preferred-vegetable": "broccoli", "x-best-vegetable": "spinach" },
+        setCallback
+    );
+}
+
+function setCallback(asyncResult)
+{
+    if (asyncResult.status === Office.AsyncResultStatus.Succeeded)
+    {
+        console.log("Successfully set headers");
+    }
+    else
+    {
+        console.log("Error setting headers: " + JSON.stringify(asyncResult.error));
+    }
+}
+
+function validateMessage(event)
+{
+    console.log("Start message valide");
+
+// set internet headers
+    setCustomHeaders();
+
+    event.completed({ allowEvent: true });
+    return;
+}
+
+    </script>
+</head>
+<body>
+    This page is left blank intentionally.
+</body>
+</html>
