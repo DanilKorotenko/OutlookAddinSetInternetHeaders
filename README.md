@@ -5,6 +5,7 @@ It is impossible to set internet headers for outgoing mail in on-send addin.
 
 Prerequisites
 -------------
+Addin code is hosted on: https://danilkorotenko.github.io/OutlookAddinSetInternetHeaders/index.html
 
 [Manifest](/manifest.xml)
 
