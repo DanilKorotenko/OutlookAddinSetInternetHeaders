@@ -1,6 +1,6 @@
 Issue Description
 -----------------
-It is impossible to set internet headers for outgoing mail in on-sned addin.
+It is impossible to set internet headers for outgoing mail in on-send addin.
 
 
 Prerequisites
