@@ -14,16 +14,15 @@ Steps To Reproduce
 ------------------
 1. Install manifest: [Manifest](/manifest.xml)
 2. Create and send test mail message. Send a test message to yourself.
-3. Review internet headers in received test message.
 
 
 Actual Result
 -------------
-Custom internet headers are absent.
-
+The message didn't sent.
 
 Expected result
 ---------------
+The message has been sent.
 Custom internet headers are present in the received message.
 
 
@@ -37,7 +36,7 @@ Software
 macOS 13.4
 
 Outlook for Mac 16.74 (23061100)
-
+Outlook for Mac 16.74.1 (23061800)
 
 Additional info
 ---------------
