@@ -13,34 +13,37 @@ Office.initialize = function (reason)
 }
 
 // Set custom internet headers.
-function setCustomHeaders()
+async function setCustomHeaders()
 {
     console.log("set custom headers");
 
-    Office.context.mailbox.item.internetHeaders.setAsync(
-        { "x-preferred-fruit": "orange", "x-preferred-vegetable": "broccoli", "x-best-vegetable": "spinach" },
-        setCallback
-    );
+    return new Promise((resolve, reject) =>
+        {
+            Office.context.mailbox.item.internetHeaders.setAsync(
+                { "x-preferred-fruit": "orange", "x-preferred-vegetable": "broccoli", "x-best-vegetable": "spinach" },
+                function(asyncResult)
+                {
+                    console.log("set internetHeaders done");
+                    if (asyncResult.status === Office.AsyncResultStatus.Succeeded)
+                    {
+                        console.log("internetHeaders was set successfully.");
+                        resolve(asyncContextObject);
+                    }
+                    else
+                    {
+                        console.log("Error setting headers: " + JSON.stringify(asyncResult.error));
+                        reject(asyncResult.error);
+                    }
+                });
+            });
 }
 
-function setCallback(asyncResult)
-{
-    if (asyncResult.status === Office.AsyncResultStatus.Succeeded)
-    {
-        console.log("Successfully set headers");
-    }
-    else
-    {
-        console.log("Error setting headers: " + JSON.stringify(asyncResult.error));
-    }
-}
-
-function validateMessage(event)
+async function validateMessage(event)
 {
     console.log("Start message valide");
 
 // set internet headers
-    setCustomHeaders();
+    await setCustomHeaders();
 
     event.completed({ allowEvent: true });
     return;
