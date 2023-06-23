@@ -6,7 +6,7 @@
     xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides"
     xsi:type="MailApp">
 
-    <Id>BD73292E-3686-4583-8889-7D5DCBCB76F0</Id>
+    <Id>4BA2129C-6E61-401A-B92B-88BCA4B8FC84</Id>
     <Version>1.5</Version>
     <ProviderName>ACME</ProviderName>
     <DefaultLocale>en-us</DefaultLocale>
