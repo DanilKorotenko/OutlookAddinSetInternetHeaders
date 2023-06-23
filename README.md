@@ -23,6 +23,7 @@ The message didn't sent.
 Expected result
 ---------------
 The message has been sent.
+
 Custom internet headers are present in the received message.
 
 
@@ -36,6 +37,7 @@ Software
 macOS 13.4
 
 Outlook for Mac 16.74 (23061100)
+
 Outlook for Mac 16.74.1 (23061800)
 
 Additional info
