@@ -1,3 +1,7 @@
+NOTE:
+This repository is for informational purposes.
+The issue described here is fixed in Outlook for Mac 16.74.1 (23061800).
+
 Issue Description
 -----------------
 It is impossible to set internet headers for outgoing mail in on-send addin.
@@ -38,7 +42,6 @@ macOS 13.4
 
 Outlook for Mac 16.74 (23061100)
 
-Outlook for Mac 16.74.1 (23061800)
 
 Additional info
 ---------------
