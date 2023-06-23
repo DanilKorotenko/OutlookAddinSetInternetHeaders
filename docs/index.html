@@ -27,7 +27,7 @@ async function setCustomHeaders()
                     if (asyncResult.status === Office.AsyncResultStatus.Succeeded)
                     {
                         console.log("internetHeaders was set successfully.");
-                        resolve(asyncContextObject);
+                        resolve();
                     }
                     else
                     {
@@ -44,6 +44,8 @@ async function validateMessage(event)
 
 // set internet headers
     await setCustomHeaders();
+
+    console.log("set custom headers done");
 
     event.completed({ allowEvent: true });
     return;
